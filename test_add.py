@@ -15,3 +15,6 @@ def test_Add():
     adder.add(3)
     adder.add(4)
     assert adder.get_result() == 10
+
+test_add()
+test_Add()
