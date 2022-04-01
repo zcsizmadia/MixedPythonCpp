@@ -5,6 +5,7 @@ RUN apt-get update \
         build-essential \
         cmake \
         gdb \
+        git \
         pylint \
         python3 \
         python3-dev \

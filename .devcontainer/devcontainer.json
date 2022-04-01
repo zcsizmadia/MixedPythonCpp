@@ -13,8 +13,11 @@
         "ms-vscode.cpptools",
         "ms-vscode.cmake-tools",
         "ms-python.python",
+        "ms-python.vscode-pylance",
         "LittleFoxTeam.vscode-python-test-adapter",
         "VisualStudioExptTeam.vscodeintellicode",
         "benjamin-simmonds.pythoncpp-debug",
+        "timonwong.shellcheck",
+        "eamodio.gitlens"
     ]
 }
