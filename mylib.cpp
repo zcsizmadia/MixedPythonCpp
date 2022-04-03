@@ -1,4 +1,5 @@
 #include <pybind11/pybind11.h>
+#include "mylib.h"
 
 double add(double a, double b)
 {
@@ -9,46 +10,6 @@ double subtract(double a, double b)
 {
     return a - b;
 }
-
-class Add
-{
-    public:
-        Add()
-            : _result(0)
-        {
-        }
-
-        Add(double value)
-            : _result(value)
-        {
-        }
-
-        ~Add()
-        {
-        }
-
-        template <typename T>
-        double add(T value)
-        {
-            _result = ::add(_result, value);
-            return _result;
-        }
-
-        template <typename T>
-        double subtract(T value)
-        {
-            _result = ::subtract(_result, value);
-            return _result;
-        }
-
-        double get_result() const
-        {
-            return _result;
-        }
-
-    private:
-        double _result;
-};
 
 namespace py = pybind11;
 

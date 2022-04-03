@@ -1,7 +1,14 @@
 {
     "python.testing.pytestArgs": [
-        "."
+        ".",
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "files.associations": {
+        "*.tcc": "cpp",
+        "optional": "cpp",
+        "memory": "cpp",
+        "numeric": "cpp",
+        "cmath": "cpp"
+    }
 }

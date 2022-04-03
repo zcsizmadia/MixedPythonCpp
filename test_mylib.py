@@ -1,9 +1,5 @@
 
-import sys
-sys.path.append("./build")
-
 from mylib import add, Add
-import numpy
 
 def test_add():
      assert add(2, 5) == 7
@@ -16,5 +12,6 @@ def test_Add():
     adder.add(4)
     assert adder.get_result() == 10
 
-test_add()
-test_Add()
+if __name__ == '__main__':
+    test_add()
+    test_Add()
