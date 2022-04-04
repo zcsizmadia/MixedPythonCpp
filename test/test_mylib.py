@@ -1,4 +1,7 @@
 
+import sys 
+sys.path.append("build")
+sys.path.append("build/Debug")
 from mylib import add, Add
 
 def test_add():

@@ -1,4 +1,9 @@
-BINARY=mylib.cpython-38-x86_64-linux-gnu.so
+NAME=mylib
+
+BINARY=mylib$(shell python3-config --extension-suffix)
+
+CFLAGS = -Dmylib_EXPORTS -g -fPIC -fvisibility=hidden $(shell python3-config --cflags)
+LDFLAGS = -fPIC -g -shared $(shell python3-config --ldflags)
 
 all: $(BINARY)
 
@@ -6,9 +11,9 @@ clean:
 	rm -f $(BINARY) mylib.o
 
 $(BINARY): mylib.o
-	g++ -fPIC -g -shared -lpython3.8 -o $@ $<
+	g++ -o $@ $< $(LDFLAGS)
 
 mylib.o: mylib.cpp
-	g++ -Dmylib_EXPORTS -I/usr/include/python3.8 -g -fPIC -fvisibility=hidden -c -o $@ $<
+	g++ $(CFLAGS) -c -o $@ $<
 
 mylib.cpp : mylib.h
