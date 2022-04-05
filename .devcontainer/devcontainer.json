@@ -2,17 +2,21 @@
     "name": "Mixed Python/C++ Development",
 
     "build": {
-        "dockerfile": "Dockerfile.ubuntu"
+        "dockerfile": "Dockerfile.python"
     },
 
     // Set *default* container specific settings.json values on container create.
     "settings": {},
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip3 install -r requirements.txt",
 
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
         "ms-vscode.cpptools",
         "ms-vscode.cmake-tools",
         "ms-python.python",
+        "ms-python.vscode-pylance",
         "LittleFoxTeam.vscode-python-test-adapter",
         "benjamin-simmonds.pythoncpp-debug"
     ]

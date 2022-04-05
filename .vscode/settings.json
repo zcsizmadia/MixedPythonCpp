@@ -10,5 +10,8 @@
         "memory": "cpp",
         "numeric": "cpp",
         "cmath": "cpp"
-    }
+    },
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true
 }
