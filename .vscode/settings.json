@@ -4,6 +4,7 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
+
     "files.associations": {
         "*.tcc": "cpp",
         "optional": "cpp",
@@ -11,7 +12,22 @@
         "numeric": "cpp",
         "cmath": "cpp"
     },
+
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/build",
+        "${workspaceFolder}/pybind11"
+    ],
+
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "/bin/bash",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/build"
+            }
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "bash"
 }

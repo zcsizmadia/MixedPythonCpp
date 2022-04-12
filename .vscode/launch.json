@@ -9,13 +9,21 @@
             "type": "pythoncpp",
             "request": "launch",
             "pythonConfig": "default",
-            "cppConfig": "default (gdb) Attach"
+            "cppConfig": "default (gdb) Attach",
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
         },
         {
             "name": "(gdb) Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "/bin/python3",
+            "program": "/usr/local/bin/python",
             "processId": "${command:pickProcess}",
             "MIMode": "gdb",
             "setupCommands": [
@@ -30,12 +38,6 @@
                     "ignoreFailures": true
                 }
             ]
-        },
-        {
-            "name": "(Windows) Attach",
-            "type": "cppvsdbg",
-            "request": "attach",
-            "processId": "${command:pickProcess}"
-        },
+        }
     ]
 }
