@@ -1,7 +1,0 @@
-flake8
-numpy
-panda
-pep8
-pytest
-setuptools
-wheel
