@@ -23,7 +23,7 @@
             "name": "(gdb) Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "/usr/local/bin/python",
+            "program": "/usr/bin/python3",
             "processId": "${command:pickProcess}",
             "MIMode": "gdb",
             "setupCommands": [
